@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity{
 
                 Log.d("적은내용", inputMessage);
 
+                binding.contentTxt.setText(inputMessage);
             }
         });
 
