@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import kr.co.tjoeun.javabasic_20200520.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     ActivityMainBinding binding;
 
@@ -21,17 +21,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-//        binding.okBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d("메인화면", "확인버튼 클릭" );
-//            }
-//        });
-        binding.okBtn.setOnClickListener(this);
-    }
+        binding.okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("메인화면", "확인버튼 클릭" );
+            }
+        });
 
-    @Override
-    public void onClick(View v) {
-        Log.d("메인화면", "자체 이벤트 코드");
     }
 }
